@@ -37,6 +37,20 @@
 		empty List $\Downarrow$ false
 	\end{tabular}
 	(empty Cons)
+
+	\begin{tabular}{c}
+		List $\Downarrow$ Cons V List
+		\\\hline
+		head List $\Downarrow$ V
+	\end{tabular}
+	(head)
+
+	\begin{tabular}{c}
+		List$_1$ $\Downarrow$ Cons V List$_2$
+		\\\hline
+		empty List$_1$ $\Downarrow$ List$_2$
+	\end{tabular}
+	(tail)
 	\item %c
 	\item %d
 	\item %e
