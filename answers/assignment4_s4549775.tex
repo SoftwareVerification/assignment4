@@ -108,6 +108,7 @@
 
 	$T_1$
 	\begin{tabular}{c}
+		$T_{10}$:\\
 		$\Gamma_1$, x : List(Int) $\vdash \lambda y.$ if (empty x) y (Cons (head x) (append (tail x) y))
 		\\\hline
 		$\Gamma_1 \vdash e_1 : \sigma_1$
@@ -182,6 +183,13 @@
 		1 : Int
 	\end{tabular}
 	(Int)
+
+	$T_{10}$
+	\begin{tabular}{c}
+		\\\hline
+		$\Gamma_2 \vdash \lambda y.$ if (empty x) y (Cons (head x) (append (tail x) y))
+	\end{tabular}
+	()
 \end{enumerate}
 
 \section{} %3
