@@ -186,13 +186,23 @@
 
 	$T_{10}$
 	\begin{tabular}{c}
+		$T_{11}$:\\
 		$\Gamma_2$, y : List(Int) $\vdash$ if (empty x) y (Cons (head x) (append (tail x) y)) : $\sigma_1$
 		\\\hline
 		$\Gamma_2 \vdash \lambda y.$ if (empty x) y (Cons (head x) (append (tail x) y))
 	\end{tabular}
 	(Lambda)
 
-	$\Gamma_3 = \Gamma_2$, y : List(Int)
+	$\Gamma_3 = \Gamma_2$, y : List(Int)\\
+	$e_2$ = Cons (head x) (append (tail x) y)
+
+	$T_{11}$
+	\begin{tabular}{c c c}
+		$\Gamma_3 \vdash$ empty x : Bool & $\Gamma_3 \vdash$ y : $\sigma_1$ & $\Gamma_3 \vdash e_2$ : $\sigma_1$
+		\\\hline
+		\multicolumn{2}{c}{$\Gamma_3 \vdash$ if (empty x) y $e_2$ : $\sigma_1$}
+	\end{tabular}
+	(If)
 \end{enumerate}
 
 \section{} %3
