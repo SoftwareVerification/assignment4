@@ -96,6 +96,7 @@
 	$e_1 = \lambda x. \lambda y.$ if (empty x) y (Cons (head x) (append (tail x) y))
 
 	\begin{tabular}{c c}
+		$T_1$: & $T_2$:\\
 		append : $\sigma_1 \vdash e_1 : \sigma_1$ & append : $\sigma_1 \vdash$ append (Cons 1 Nil) (Cons 2 Nil) : List(Int)
 		\\\hline
 		\multicolumn{2}{c}{$\vdash$ let append = $e_1$ in append (Cons 1 Nil) (Cons 2 Nil) : List(Int)}
@@ -103,6 +104,20 @@
 	(Let)
 
 	$\Gamma_1 =$ append : $\sigma_1$
+
+	$T_1$
+	\begin{tabular}{c}
+		\\\hline
+		$\Gamma_1 \vdash e_1 : \sigma_1$
+	\end{tabular}
+	()
+
+	$T_2$
+	\begin{tabular}{c}
+		\\\hline
+		$\Gamma_1 \vdash$ append (Cons 1 Nil) (Cons 2 Nil) : List(Int)
+	\end{tabular}
+	()
 \end{enumerate}
 
 \section{} %3
