@@ -52,6 +52,26 @@
 	\end{tabular}
 	(tail)
 	\item %c
+	First we add the function to the syntax: $e::= \dots |$ append List$_1$ List$_2$. Now we can define the semantics:
+
+	\begin{tabular}{c}
+		\\\hline
+		append Nil List$_2$ $\Downarrow$ List$_2$
+	\end{tabular}
+	(append Nil 1)
+
+	\begin{tabular}{c}
+		\\\hline
+		append List$_1$ Nil $\Downarrow$ List$_1$
+	\end{tabular}
+	(append Nil 2)
+
+	\begin{tabular}{c}
+		List$_1$ $\Downarrow$ Cons V$_1$ List$_1$'
+		\\\hline
+		append List$_1$ List$_2$ $\Downarrow$ Cons V$_1$ (append List$_1$' List$_2$)
+	\end{tabular}
+	(append Cons)
 	\item %d
 	\item %e
 \end{enumerate}
