@@ -92,6 +92,15 @@
 	\end{tabular}
 	(List Cons)
 	\item %e
+	$\sigma_1 =$ List(int) $\rightarrow$ List(Int) $\rightarrow$ List(Int)\\
+	$e_1 = \lambda x. \lambda y.$ if (empty x) y (Cons (head x) (append (tail x) y))
+
+	\begin{tabular}{c c}
+		append : $\sigma_1 \vdash e_1 : \sigma_1$ & append : $\sigma_1 \vdash$ append (Cons 1 Nil) (Cons 2 Nil) : List(Int)
+		\\\hline
+		\multicolumn{2}{c}{$\vdash$ let append = $e_1$ in append (Cons 1 Nil) (Cons 2 Nil) : List(Int)}
+	\end{tabular}
+	(Let)
 \end{enumerate}
 
 \section{} %3
