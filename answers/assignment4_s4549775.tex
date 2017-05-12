@@ -76,6 +76,7 @@
 	Apparently this was not what we were supposed to do, we were supposed to define a lambda function:
 
 	let $append = \lambda x. \lambda y.$ if (empty y) x (if (empty x) y (Cons (head x) (append (tail x) y)))
+	in append (Cons 1 Nil) (Cons 2 Nil)
 	\item %d
 	\begin{tabular}{c}
 		\\\hline
