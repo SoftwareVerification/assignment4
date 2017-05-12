@@ -20,7 +20,7 @@
 	First we add lists to the expressions:
 	$e ::= \dots |$ List
 	then we define the lists:
-	$List ::=$ Nil $|$ Cons List.
+	$List ::=$ Nil $|$ Cons V List.
 
 	Now we can define operations of the lists: $e ::= \dots |$ List $|$ head List $|$ tail List $|$ empty List.
 	\item %b
@@ -32,7 +32,7 @@
 	(empty Nil)
 
 	\begin{tabular}{c}
-		List $\Downarrow$ Cons List
+		List $\Downarrow$ Cons V List
 		\\\hline
 		empty List $\Downarrow$ false
 	\end{tabular}
