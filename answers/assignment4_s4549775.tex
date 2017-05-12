@@ -24,6 +24,19 @@
 
 	Now we can define operations of the lists: $e ::= \dots |$ List $|$ head List $|$ tail List $|$ empty List.
 	\item %b
+	\begin{tabular}{c}
+		List $\Downarrow$ Nil
+		\\\hline
+		empty List $\Downarrow$ true
+	\end{tabular}
+	(empty Nil)
+
+	\begin{tabular}{c}
+		List $\Downarrow$ Cons List
+		\\\hline
+		empty List $\Downarrow$ false
+	\end{tabular}
+	(empty Cons)
 	\item %c
 	\item %d
 	\item %e
