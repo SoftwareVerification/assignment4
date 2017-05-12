@@ -77,6 +77,18 @@
 
 	let $append = \lambda x. \lambda y.$ if (empty y) x (if (empty x) y (Cons (head x) (append (tail x) y)))
 	\item %d
+	\begin{tabular}{c}
+		\\\hline
+		$\Gamma \vdash$ Nil : List($\sigma$)
+	\end{tabular}
+	(List Nil)
+
+	\begin{tabular}{c c}
+		V: $\sigma$ & List' : $\sigma$
+		\\\hline
+		\multicolumn{2}{c}{$\Gamma \vdash$ Cons V List' : List($\sigma$)}
+	\end{tabular}
+	(List Cons)
 	\item %e
 \end{enumerate}
 
