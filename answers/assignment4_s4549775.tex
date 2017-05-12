@@ -114,11 +114,26 @@
 
 	$T_2$
 	\begin{tabular}{c c}
+		$T_3$: & $T_4$:\\
 		$\Gamma_1 \vdash$ append (Cons 1 Nil) : List(Int) $\rightarrow$ List(int) & $\Gamma_1 \vdash$ (Cons 2 Nil) : List(Int)
 		\\\hline
 		\multicolumn{2}{c}{$\Gamma_1 \vdash$ append (Cons 1 Nil) (Cons 2 Nil) : List(Int)}
 	\end{tabular}
 	(App)
+
+	$T_3$
+	\begin{tabular}{c}
+		\\\hline
+		$\Gamma_1 \vdash$ append (Cons 1 Nil) : List(Int) $\rightarrow$ List(int)
+	\end{tabular}
+	()
+
+	$T_4$
+	\begin{tabular}{c}
+		\\\hline
+		$\Gamma_1 \vdash$ (Cons 2 Nil) : List(Int)
+	\end{tabular}
+	()
 \end{enumerate}
 
 \section{} %3
