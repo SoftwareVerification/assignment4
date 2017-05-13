@@ -104,12 +104,13 @@
 	\end{tabular}
 	(Let)
 
-	$\Gamma_1 =$ append : $\sigma_1$
+	$\Gamma_1 =$ append : $\sigma_1$\\
+	$\sigma_2 =$ List(Int) $\rightarrow$ List(Int)
 
 	$T_1$
 	\begin{tabular}{c}
 		$T_{10}$:\\
-		$\Gamma_1$, x : List(Int) $\vdash \lambda y.$ if (empty x) y (Cons (head x) (append (tail x) y)) : $\sigma_1$
+		$\Gamma_1$, x : List(Int) $\vdash \lambda y.$ if (empty x) y (Cons (head x) (append (tail x) y)) : $\sigma_2$
 		\\\hline
 		$\Gamma_1 \vdash e_1 : \sigma_1$
 	\end{tabular}
@@ -187,9 +188,9 @@
 	$T_{10}$
 	\begin{tabular}{c}
 		$T_{11}$:\\
-		$\Gamma_2$, y : List(Int) $\vdash$ if (empty x) y (Cons (head x) (append (tail x) y)) : $\sigma_1$
+		$\Gamma_2$, y : List(Int) $\vdash$ if (empty x) y (Cons (head x) (append (tail x) y)) : List(Int)
 		\\\hline
-		$\Gamma_2 \vdash \lambda y.$ if (empty x) y (Cons (head x) (append (tail x) y)) : $\sigma_1$
+		$\Gamma_2 \vdash \lambda y.$ if (empty x) y (Cons (head x) (append (tail x) y)) : $\sigma_2$
 	\end{tabular}
 	(Lambda)
 
@@ -198,7 +199,7 @@
 
 	$T_{11}$
 	\begin{tabular}{c c c}
-		$\Gamma_3 \vdash$ empty x : Bool & $\Gamma_3 \vdash$ y : $\sigma_1$ & $\Gamma_3 \vdash e_2$ : $\sigma_1$
+		$\Gamma_3 \vdash$ empty x : Bool & $\Gamma_3 \vdash$ y : List(Int) & $\Gamma_3 \vdash e_2$ : List(Int)
 		\\\hline
 		\multicolumn{2}{c}{$\Gamma_3 \vdash$ if (empty x) y $e_2$ : $\sigma_1$}
 	\end{tabular}
