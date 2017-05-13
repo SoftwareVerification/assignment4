@@ -199,11 +199,33 @@
 
 	$T_{11}$
 	\begin{tabular}{c c c}
+		$T_{12}$: & $T_{13}$: & $T_{14}$:\\
 		$\Gamma_3 \vdash$ empty x : Bool & $\Gamma_3 \vdash$ y : List(Int) & $\Gamma_3 \vdash e_2$ : List(Int)
 		\\\hline
 		\multicolumn{2}{c}{$\Gamma_3 \vdash$ if (empty x) y $e_2$ : $\sigma_1$}
 	\end{tabular}
 	(If)
+
+	$T_{12}$
+	\begin{tabular}{c}
+		\\\hline
+		$\Gamma_3 \vdash$ empty x : Bool
+	\end{tabular}
+	()
+
+	$T_{13}$
+	\begin{tabular}{c}
+		\\\hline
+		$\Gamma_3 \vdash$ y : List(Int)
+	\end{tabular}
+	()
+
+	$T_{14}$
+	\begin{tabular}{c}
+		\\\hline
+		$\Gamma_3 \vdash e_2$ : List(Int)
+	\end{tabular}
+	()
 \end{enumerate}
 
 \section{} %3
